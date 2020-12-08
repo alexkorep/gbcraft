@@ -1,0 +1,82 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "maps/map01.tmx",
+    "expandedProjectPaths": [
+        "maps"
+    ],
+    "exportAsImage.useCurrentScale": false,
+    "exportAsImage.visibleLayersOnly": false,
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "/Volumes/Samsung_T5/alexey/proj/gbmaps/back.tsx": {
+            "scaleInDock": 1
+        },
+        "/Volumes/Samsung_T5/alexey/proj/gbmaps/gameboy_rpg_v01.tsx": {
+            "scaleInDock": 4,
+            "scaleInEditor": 3
+        },
+        "/Volumes/Samsung_T5/alexey/proj/gbmaps/map03.tmx": {
+            "scale": 5.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 82.45454545454547,
+                "y": 104.18181818181819
+            }
+        },
+        "/Volumes/Samsung_T5/alexey/proj/gbmaps/map2.tmx": {
+            "scale": 4.934722222222222,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 31.308753166338306,
+                "y": 31.815367295243462
+            }
+        },
+        "/Volumes/Samsung_T5/alexey/proj/gbmaps/untitled.tmx": {
+            "scale": 11,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 5.31818181818182,
+                "y": 20.636363636363633
+            }
+        },
+        "maps/gameboy_outdoor_assets_v1.2.tsx": {
+            "scaleInDock": 5.5,
+            "scaleInEditor": 3
+        },
+        "maps/map01.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 63.66666666666666,
+                "y": 103.99999999999999
+            }
+        }
+    },
+    "map.height": 32,
+    "map.lastUsedFormat": "tmx",
+    "map.renderOrder": null,
+    "map.tileHeight": 8,
+    "map.tileWidth": 8,
+    "map.width": 32,
+    "openFiles": [
+        "maps/map01.tmx",
+        "maps/gameboy_outdoor_assets_v1.2.tsx"
+    ],
+    "project": "gbcraft.tiled-project",
+    "recentFiles": [
+        "maps/gameboy_outdoor_assets_v1.2.tsx",
+        "maps/map01.tmx",
+        "/Volumes/Samsung_T5/alexey/proj/gbmaps/gameboy_rpg_v01.tsx",
+        "/Volumes/Samsung_T5/alexey/proj/gbmaps/map03.tmx",
+        "/Volumes/Samsung_T5/alexey/proj/gbmaps/map2.tmx",
+        "/Volumes/Samsung_T5/alexey/proj/gbmaps/untitled.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 8,
+        "width": 8
+    }
+}
