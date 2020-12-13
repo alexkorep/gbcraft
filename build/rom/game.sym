@@ -756,21 +756,21 @@
 01:4006 _background_attr_bank_ptrs
 01:4009 _palette_bank_ptrs
 01:400C _sprite_bank_ptrs
-01:4012 _scene_bank_ptrs
-01:4015 _collision_bank_ptrs
-01:4018 _avatar_bank_ptrs
-01:401B _music_tracks
-01:401F _music_banks
-01:4021 _Start_Adventure
-01:4036 _Update_Adventure
-01:4636 _Start_Platform
-01:4702 _Update_Platform
-01:52E2 _Start_PointNClick
-01:530B _Update_PointNClick
-01:55C6 _Start_Shmup
-01:5656 _Update_Shmup
-01:5BF8 _Start_TopDown
-01:5C0D _Update_TopDown
+01:4018 _scene_bank_ptrs
+01:401B _collision_bank_ptrs
+01:401E _avatar_bank_ptrs
+01:4021 _music_tracks
+01:4025 _music_banks
+01:4027 _Start_Adventure
+01:403C _Update_Adventure
+01:463C _Start_Platform
+01:4708 _Update_Platform
+01:52E8 _Start_PointNClick
+01:5311 _Update_PointNClick
+01:55CC _Start_Shmup
+01:565C _Update_Shmup
+01:5BFE _Start_TopDown
+01:5C13 _Update_TopDown
 ; Area: _SFR0
 00:FF00 _P1_REG
 ; Area: _SFR1
