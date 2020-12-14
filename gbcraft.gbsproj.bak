@@ -113,7 +113,7 @@
                 0,
                 0,
                 0,
-                0,
+                15,
                 0,
                 0,
                 15,
@@ -1053,14 +1053,144 @@
             "playerHit2Script": [],
             "playerHit3Script": [],
             "id": "d0dd92fb-96a6-434c-80f2-eed07249fa9d",
-            "x": 135.15842589862066,
-            "y": 379.0306009947188,
+            "x": 117.71093417215515,
+            "y": 321.31966682256365,
             "actors": [
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "d00e6ba3-ef89-4202-b2c7-4a0eb50ef6d2",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [
+                        {
+                            "id": "7973a76d-739c-468d-bddf-986141d7c8c3",
+                            "command": "EVENT_ACTOR_HIDE",
+                            "args": {
+                                "actorId": "$self$",
+                                "__collapse": false
+                            }
+                        },
+                        {
+                            "id": "343e4563-29f5-4922-9fc2-ddce59310a95",
+                            "command": "EVENT_ACTOR_SET_SPRITE",
+                            "args": {
+                                "actorId": "player",
+                                "spriteSheetId": "0aff6908-5cc6-480d-ad35-8cd52c9b532f"
+                            }
+                        },
+                        {
+                            "id": "e8b4dd79-cda2-4c64-9adb-715faa7f4067",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "3b44cdd9-518a-4b49-85b0-b1e7f26c72ca",
+                    "x": 16,
+                    "y": 14
+                },
                 {
                     "name": "Tree",
                     "frame": 0,
                     "animate": false,
-                    "spriteSheetId": "d23fc84d-2c25-4ee0-ba2f-27f24d1931c4",
+                    "spriteSheetId": "ba25926e-58e9-4bcd-b417-66231c48922a",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [
+                        {
+                            "id": "f03fe0f4-4ce9-40c3-b611-12ce7dd52f9d",
+                            "command": "EVENT_INC_VALUE",
+                            "args": {
+                                "variable": "L0"
+                            }
+                        },
+                        {
+                            "id": "b9c42095-f25b-4819-9aef-01a6f56c3dd1",
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "L0",
+                                "operator": "==",
+                                "comparator": 3,
+                                "__collapseElse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "id": "735861e3-0448-47b1-8992-08e57089f493",
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        }
+                                    },
+                                    {
+                                        "id": "92d8f9d1-48ae-4f71-8f19-09c33df8390d",
+                                        "command": "EVENT_INC_VALUE",
+                                        "args": {
+                                            "variable": "0"
+                                        }
+                                    },
+                                    {
+                                        "id": "f32aa601-2397-4eaf-966d-2cb105b3ff17",
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "You have $00$ wood\npiece(s)"
+                                            ],
+                                            "avatarId": ""
+                                        }
+                                    },
+                                    {
+                                        "id": "6d84e43f-19a3-4d7e-a056-256c8e191eef",
+                                        "command": "EVENT_END"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "id": "c804c4c7-d06d-41d7-b88c-afd84c031676",
+                                        "command": "EVENT_ACTOR_SET_FRAME",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "frame": {
+                                                "type": "variable",
+                                                "value": "L0"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "id": "18851888-5f48-43c7-89f1-161ef0ac4efb",
+                                        "command": "EVENT_END"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "c094b7e6-63f0-4697-8428-81e76e436c03",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "b946c4ae-6361-475f-9029-075616ac73ed",
+                    "x": 21,
+                    "y": 5
+                },
+                {
+                    "name": "Tree",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "ba25926e-58e9-4bcd-b417-66231c48922a",
                     "spriteType": "static",
                     "direction": "down",
                     "moveSpeed": "1",
@@ -1080,79 +1210,18 @@
                                         "id": "87305fef-483b-4e5d-95fb-c3793495254c",
                                         "command": "EVENT_INC_VALUE",
                                         "args": {
-                                            "variable": "0",
-                                            "__collapse": true
+                                            "variable": "0"
                                         }
                                     },
                                     {
-                                        "id": "5454f75e-6e12-43ec-abfe-becf7b91e965",
-                                        "command": "EVENT_IF_VALUE",
+                                        "id": "58ee4245-bced-477a-a818-3eccc25a165c",
+                                        "command": "EVENT_ACTOR_SET_FRAME",
                                         "args": {
-                                            "variable": "0",
-                                            "operator": ">",
-                                            "comparator": 3,
-                                            "__collapseElse": false
-                                        },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "id": "9c1fb75b-059b-439b-b506-b3ca7108d746",
-                                                    "command": "EVENT_INC_VALUE",
-                                                    "args": {
-                                                        "variable": "1"
-                                                    }
-                                                },
-                                                {
-                                                    "id": "52cc351b-756f-4818-949b-3f12205eb8dc",
-                                                    "command": "EVENT_ACTOR_HIDE",
-                                                    "args": {
-                                                        "actorId": "0"
-                                                    }
-                                                },
-                                                {
-                                                    "id": "07e26409-2960-4e7e-8bee-f935b7487e79",
-                                                    "command": "EVENT_SET_VALUE",
-                                                    "args": {
-                                                        "variable": "0",
-                                                        "value": {
-                                                            "type": "number",
-                                                            "value": 0
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "id": "a1feb4a1-c05a-4dc0-9bf5-8945e8f776b0",
-                                                    "command": "EVENT_TEXT",
-                                                    "args": {
-                                                        "text": [
-                                                            "You have $V1$ wood\npiece(s)"
-                                                        ],
-                                                        "avatarId": ""
-                                                    }
-                                                },
-                                                {
-                                                    "id": "aff17754-4d6d-4c47-b70b-08eae2e37e4f",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ],
-                                            "false": [
-                                                {
-                                                    "id": "58ee4245-bced-477a-a818-3eccc25a165c",
-                                                    "command": "EVENT_ACTOR_SET_FRAME",
-                                                    "args": {
-                                                        "actorId": "0",
-                                                        "frame": {
-                                                            "type": "variable",
-                                                            "value": "0"
-                                                        },
-                                                        "__collapse": false
-                                                    }
-                                                },
-                                                {
-                                                    "id": "a29e747b-4ab2-4ca6-a7c6-549eeb071e6c",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ]
+                                            "actorId": "0",
+                                            "frame": {
+                                                "type": "variable",
+                                                "value": "0"
+                                            }
                                         }
                                     },
                                     {
@@ -1173,117 +1242,36 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "8faa6f1e-884f-40c6-8886-ee77e0201595",
-                    "x": 17,
-                    "y": 10
+                    "x": 14,
+                    "y": 6
                 },
                 {
                     "name": "",
                     "frame": 0,
                     "animate": false,
-                    "spriteSheetId": "d23fc84d-2c25-4ee0-ba2f-27f24d1931c4",
+                    "spriteSheetId": "ca02ad2c-872d-4ec1-a1e9-e0b542dce89c",
                     "spriteType": "static",
                     "direction": "down",
                     "moveSpeed": "1",
                     "animSpeed": "3",
                     "script": [
                         {
-                            "id": "e2f9ca91-82bc-4a86-b07c-fc1ebf38b011",
-                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "id": "278970de-bfbc-417f-ad75-a3450577b67c",
+                            "command": "EVENT_SAVE_DATA",
+                            "args": {}
+                        },
+                        {
+                            "id": "89c7325f-4a69-4d51-8adf-f41f64746cea",
+                            "command": "EVENT_TEXT",
                             "args": {
-                                "customEventId": "f6dbfbd3-49a0-4c0a-b2e2-2e47e16a64d8",
-                                "__name": "WoodMining",
-                                "$variable[0]$": "L0"
-                            },
-                            "children": {
-                                "script": [
-                                    {
-                                        "id": "87305fef-483b-4e5d-95fb-c3793495254c",
-                                        "command": "EVENT_INC_VALUE",
-                                        "args": {
-                                            "variable": "0",
-                                            "__collapse": true
-                                        }
-                                    },
-                                    {
-                                        "id": "5454f75e-6e12-43ec-abfe-becf7b91e965",
-                                        "command": "EVENT_IF_VALUE",
-                                        "args": {
-                                            "variable": "0",
-                                            "operator": ">",
-                                            "comparator": 3,
-                                            "__collapseElse": false
-                                        },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "id": "9c1fb75b-059b-439b-b506-b3ca7108d746",
-                                                    "command": "EVENT_INC_VALUE",
-                                                    "args": {
-                                                        "variable": "1"
-                                                    }
-                                                },
-                                                {
-                                                    "id": "52cc351b-756f-4818-949b-3f12205eb8dc",
-                                                    "command": "EVENT_ACTOR_HIDE",
-                                                    "args": {
-                                                        "actorId": "0"
-                                                    }
-                                                },
-                                                {
-                                                    "id": "07e26409-2960-4e7e-8bee-f935b7487e79",
-                                                    "command": "EVENT_SET_VALUE",
-                                                    "args": {
-                                                        "variable": "0",
-                                                        "value": {
-                                                            "type": "number",
-                                                            "value": 0
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "id": "a1feb4a1-c05a-4dc0-9bf5-8945e8f776b0",
-                                                    "command": "EVENT_TEXT",
-                                                    "args": {
-                                                        "text": [
-                                                            "You have $V1$ wood\npiece(s)"
-                                                        ],
-                                                        "avatarId": ""
-                                                    }
-                                                },
-                                                {
-                                                    "id": "aff17754-4d6d-4c47-b70b-08eae2e37e4f",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ],
-                                            "false": [
-                                                {
-                                                    "id": "58ee4245-bced-477a-a818-3eccc25a165c",
-                                                    "command": "EVENT_ACTOR_SET_FRAME",
-                                                    "args": {
-                                                        "actorId": "0",
-                                                        "frame": {
-                                                            "type": "variable",
-                                                            "value": "0"
-                                                        },
-                                                        "__collapse": false
-                                                    }
-                                                },
-                                                {
-                                                    "id": "a29e747b-4ab2-4ca6-a7c6-549eeb071e6c",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "id": "352c27bf-f902-438a-bd7f-38165b4c99c8",
-                                        "command": "EVENT_END"
-                                    }
-                                ]
+                                "text": [
+                                    "Game saved."
+                                ],
+                                "avatarId": ""
                             }
                         },
                         {
-                            "id": "5075d94d-f881-40c8-964f-bd06f49c3bba",
+                            "id": "c7183d28-0113-4d16-becd-c3e30ebee7d0",
                             "command": "EVENT_END"
                         }
                     ],
@@ -1292,369 +1280,9 @@
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
-                    "id": "736bf8c6-63ad-48dc-bb15-c535156bb368",
-                    "x": 17,
-                    "y": 9
-                },
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "6d4581c0-fa15-4f08-96a5-15e08a2a7a02",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": "1",
-                    "animSpeed": "3",
-                    "script": [
-                        {
-                            "id": "79661446-83cc-43c7-a3c8-0e3951f0cf65",
-                            "command": "EVENT_CALL_CUSTOM_EVENT",
-                            "args": {
-                                "customEventId": "f6dbfbd3-49a0-4c0a-b2e2-2e47e16a64d8",
-                                "__name": "WoodMining",
-                                "$variable[0]$": "L0"
-                            },
-                            "children": {
-                                "script": [
-                                    {
-                                        "id": "87305fef-483b-4e5d-95fb-c3793495254c",
-                                        "command": "EVENT_INC_VALUE",
-                                        "args": {
-                                            "variable": "0",
-                                            "__collapse": true
-                                        }
-                                    },
-                                    {
-                                        "id": "5454f75e-6e12-43ec-abfe-becf7b91e965",
-                                        "command": "EVENT_IF_VALUE",
-                                        "args": {
-                                            "variable": "0",
-                                            "operator": ">",
-                                            "comparator": 3,
-                                            "__collapseElse": false
-                                        },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "id": "9c1fb75b-059b-439b-b506-b3ca7108d746",
-                                                    "command": "EVENT_INC_VALUE",
-                                                    "args": {
-                                                        "variable": "1"
-                                                    }
-                                                },
-                                                {
-                                                    "id": "52cc351b-756f-4818-949b-3f12205eb8dc",
-                                                    "command": "EVENT_ACTOR_HIDE",
-                                                    "args": {
-                                                        "actorId": "0"
-                                                    }
-                                                },
-                                                {
-                                                    "id": "07e26409-2960-4e7e-8bee-f935b7487e79",
-                                                    "command": "EVENT_SET_VALUE",
-                                                    "args": {
-                                                        "variable": "0",
-                                                        "value": {
-                                                            "type": "number",
-                                                            "value": 0
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "id": "a1feb4a1-c05a-4dc0-9bf5-8945e8f776b0",
-                                                    "command": "EVENT_TEXT",
-                                                    "args": {
-                                                        "text": [
-                                                            "You have $V1$ wood\npiece(s)"
-                                                        ],
-                                                        "avatarId": ""
-                                                    }
-                                                },
-                                                {
-                                                    "id": "aff17754-4d6d-4c47-b70b-08eae2e37e4f",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ],
-                                            "false": [
-                                                {
-                                                    "id": "58ee4245-bced-477a-a818-3eccc25a165c",
-                                                    "command": "EVENT_ACTOR_SET_FRAME",
-                                                    "args": {
-                                                        "actorId": "0",
-                                                        "frame": {
-                                                            "type": "variable",
-                                                            "value": "0"
-                                                        },
-                                                        "__collapse": false
-                                                    }
-                                                },
-                                                {
-                                                    "id": "a29e747b-4ab2-4ca6-a7c6-549eeb071e6c",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "id": "352c27bf-f902-438a-bd7f-38165b4c99c8",
-                                        "command": "EVENT_END"
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "id": "59867b0a-e0d9-4641-9ada-36e92bcee813",
-                            "command": "EVENT_END"
-                        }
-                    ],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "899c14c4-7a4c-4f82-98ff-d1203e23d7a1",
-                    "x": 17,
+                    "id": "1cb587ce-7b69-4ce7-8167-260e58c94f6d",
+                    "x": 8,
                     "y": 7
-                },
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "6d4581c0-fa15-4f08-96a5-15e08a2a7a02",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": "1",
-                    "animSpeed": "3",
-                    "script": [
-                        {
-                            "id": "1233ecac-34fb-4ebe-af13-572a111c84ee",
-                            "command": "EVENT_CALL_CUSTOM_EVENT",
-                            "args": {
-                                "customEventId": "f6dbfbd3-49a0-4c0a-b2e2-2e47e16a64d8",
-                                "__name": "WoodMining",
-                                "$variable[0]$": "L0"
-                            },
-                            "children": {
-                                "script": [
-                                    {
-                                        "id": "87305fef-483b-4e5d-95fb-c3793495254c",
-                                        "command": "EVENT_INC_VALUE",
-                                        "args": {
-                                            "variable": "0",
-                                            "__collapse": true
-                                        }
-                                    },
-                                    {
-                                        "id": "5454f75e-6e12-43ec-abfe-becf7b91e965",
-                                        "command": "EVENT_IF_VALUE",
-                                        "args": {
-                                            "variable": "0",
-                                            "operator": ">",
-                                            "comparator": 3,
-                                            "__collapseElse": false
-                                        },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "id": "9c1fb75b-059b-439b-b506-b3ca7108d746",
-                                                    "command": "EVENT_INC_VALUE",
-                                                    "args": {
-                                                        "variable": "1"
-                                                    }
-                                                },
-                                                {
-                                                    "id": "52cc351b-756f-4818-949b-3f12205eb8dc",
-                                                    "command": "EVENT_ACTOR_HIDE",
-                                                    "args": {
-                                                        "actorId": "0"
-                                                    }
-                                                },
-                                                {
-                                                    "id": "07e26409-2960-4e7e-8bee-f935b7487e79",
-                                                    "command": "EVENT_SET_VALUE",
-                                                    "args": {
-                                                        "variable": "0",
-                                                        "value": {
-                                                            "type": "number",
-                                                            "value": 0
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "id": "a1feb4a1-c05a-4dc0-9bf5-8945e8f776b0",
-                                                    "command": "EVENT_TEXT",
-                                                    "args": {
-                                                        "text": [
-                                                            "You have $V1$ wood\npiece(s)"
-                                                        ],
-                                                        "avatarId": ""
-                                                    }
-                                                },
-                                                {
-                                                    "id": "aff17754-4d6d-4c47-b70b-08eae2e37e4f",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ],
-                                            "false": [
-                                                {
-                                                    "id": "58ee4245-bced-477a-a818-3eccc25a165c",
-                                                    "command": "EVENT_ACTOR_SET_FRAME",
-                                                    "args": {
-                                                        "actorId": "0",
-                                                        "frame": {
-                                                            "type": "variable",
-                                                            "value": "0"
-                                                        },
-                                                        "__collapse": false
-                                                    }
-                                                },
-                                                {
-                                                    "id": "a29e747b-4ab2-4ca6-a7c6-549eeb071e6c",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "id": "352c27bf-f902-438a-bd7f-38165b4c99c8",
-                                        "command": "EVENT_END"
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "id": "20c62e7a-5a00-42de-ab94-29ae5121de76",
-                            "command": "EVENT_END"
-                        }
-                    ],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "1b0eb32c-ab9f-401b-9b3d-87b361c73ddc",
-                    "x": 16,
-                    "y": 8
-                },
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "6d4581c0-fa15-4f08-96a5-15e08a2a7a02",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": "1",
-                    "animSpeed": "3",
-                    "script": [
-                        {
-                            "id": "40ee87ca-7f40-4593-872f-8fb0ac1079a8",
-                            "command": "EVENT_CALL_CUSTOM_EVENT",
-                            "args": {
-                                "customEventId": "f6dbfbd3-49a0-4c0a-b2e2-2e47e16a64d8",
-                                "__name": "WoodMining",
-                                "$variable[0]$": "L0"
-                            },
-                            "children": {
-                                "script": [
-                                    {
-                                        "id": "87305fef-483b-4e5d-95fb-c3793495254c",
-                                        "command": "EVENT_INC_VALUE",
-                                        "args": {
-                                            "variable": "0",
-                                            "__collapse": true
-                                        }
-                                    },
-                                    {
-                                        "id": "5454f75e-6e12-43ec-abfe-becf7b91e965",
-                                        "command": "EVENT_IF_VALUE",
-                                        "args": {
-                                            "variable": "0",
-                                            "operator": ">",
-                                            "comparator": 3,
-                                            "__collapseElse": false
-                                        },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "id": "9c1fb75b-059b-439b-b506-b3ca7108d746",
-                                                    "command": "EVENT_INC_VALUE",
-                                                    "args": {
-                                                        "variable": "1"
-                                                    }
-                                                },
-                                                {
-                                                    "id": "52cc351b-756f-4818-949b-3f12205eb8dc",
-                                                    "command": "EVENT_ACTOR_HIDE",
-                                                    "args": {
-                                                        "actorId": "0"
-                                                    }
-                                                },
-                                                {
-                                                    "id": "07e26409-2960-4e7e-8bee-f935b7487e79",
-                                                    "command": "EVENT_SET_VALUE",
-                                                    "args": {
-                                                        "variable": "0",
-                                                        "value": {
-                                                            "type": "number",
-                                                            "value": 0
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "id": "a1feb4a1-c05a-4dc0-9bf5-8945e8f776b0",
-                                                    "command": "EVENT_TEXT",
-                                                    "args": {
-                                                        "text": [
-                                                            "You have $V1$ wood\npiece(s)"
-                                                        ],
-                                                        "avatarId": ""
-                                                    }
-                                                },
-                                                {
-                                                    "id": "aff17754-4d6d-4c47-b70b-08eae2e37e4f",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ],
-                                            "false": [
-                                                {
-                                                    "id": "58ee4245-bced-477a-a818-3eccc25a165c",
-                                                    "command": "EVENT_ACTOR_SET_FRAME",
-                                                    "args": {
-                                                        "actorId": "0",
-                                                        "frame": {
-                                                            "type": "variable",
-                                                            "value": "0"
-                                                        },
-                                                        "__collapse": false
-                                                    }
-                                                },
-                                                {
-                                                    "id": "a29e747b-4ab2-4ca6-a7c6-549eeb071e6c",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "id": "352c27bf-f902-438a-bd7f-38165b4c99c8",
-                                        "command": "EVENT_END"
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "id": "0307ef71-c851-426f-9d21-99a90e02c97b",
-                            "command": "EVENT_END"
-                        }
-                    ],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "4a5d04ed-7db4-4115-8e43-21cc4403cb53",
-                    "x": 18,
-                    "y": 8
                 }
             ],
             "triggers": [
@@ -2099,8 +1727,8 @@
             "playerHit2Script": [],
             "playerHit3Script": [],
             "id": "cad953a6-51d7-477a-bd6c-9857ca0f114b",
-            "x": 455.585674615646,
-            "y": 375.39848752459955,
+            "x": 434.1118386446115,
+            "y": 301.5821763741686,
             "actors": [],
             "triggers": [
                 {
@@ -2759,9 +2387,9 @@
                                 "id": "e95fda87-7ca3-438f-883e-aed7e2704c10",
                                 "command": "EVENT_SWITCH_SCENE",
                                 "args": {
-                                    "sceneId": "d0dd92fb-96a6-434c-80f2-eed07249fa9d",
-                                    "x": 12,
-                                    "y": 4,
+                                    "sceneId": "704d46d8-fabb-4bb5-b174-60d1367369c9",
+                                    "x": 2,
+                                    "y": 2,
                                     "direction": "",
                                     "fadeSpeed": "2"
                                 }
@@ -2781,19 +2409,21 @@
                     }
                 },
                 {
-                    "id": "b44d209e-0385-47e7-8ba7-41ee9278dd19",
-                    "command": "EVENT_WAIT",
-                    "args": {
-                        "time": 0.5
-                    }
-                },
-                {
                     "id": "77eb84bb-e792-4197-9178-9cdde7e7e161",
                     "command": "EVENT_CAMERA_MOVE_TO",
                     "args": {
                         "x": 0,
                         "y": 14,
                         "speed": "1"
+                    }
+                },
+                {
+                    "id": "20a1cee9-00c4-4bba-8834-006f5888f7a6",
+                    "command": "EVENT_CHOICE",
+                    "args": {
+                        "variable": "L0",
+                        "trueText": "New game",
+                        "falseText": "Continue"
                     }
                 },
                 {
@@ -2805,7 +2435,437 @@
             "playerHit2Script": [],
             "playerHit3Script": [],
             "id": "5aae2bdc-1cfa-4db2-a529-2673dfde6f11",
-            "x": 149.8052621870472,
+            "x": 132.35777046058172,
+            "y": 30,
+            "actors": [],
+            "triggers": []
+        },
+        {
+            "name": "Scene 4",
+            "backgroundId": "19412431-3890-427f-bd1c-64f1acd42a32",
+            "width": 20,
+            "height": 18,
+            "collisions": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "tileColors": [],
+            "script": [
+                {
+                    "id": "4fcb143f-c2e1-4c5e-9a36-3f1442136cc5",
+                    "command": "EVENT_CHOICE",
+                    "args": {
+                        "variable": "L0",
+                        "trueText": "New game",
+                        "falseText": "Continue"
+                    }
+                },
+                {
+                    "id": "911ba4f0-95fc-45f1-8f17-cc6ec4ed339e",
+                    "command": "EVENT_IF_TRUE",
+                    "args": {
+                        "variable": "L0",
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "id": "592fab66-d1c0-49ad-91fb-596831ba7a8e",
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "d0dd92fb-96a6-434c-80f2-eed07249fa9d",
+                                    "x": 12,
+                                    "y": 3,
+                                    "direction": "right",
+                                    "fadeSpeed": "2"
+                                }
+                            },
+                            {
+                                "id": "dd3b108e-8465-421a-a4c9-f6ff96e3b79d",
+                                "command": "EVENT_END"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "id": "1971cb1b-9a51-492b-a9c6-06255e8d8c78",
+                                "command": "EVENT_LOAD_DATA",
+                                "args": {}
+                            },
+                            {
+                                "id": "812731d3-daaf-4423-bae9-80b6ecb1c079",
+                                "command": "EVENT_END"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "c42afc89-1b54-435b-a06e-db1ed95f39b0",
+                    "command": "EVENT_END"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": [],
+            "id": "704d46d8-fabb-4bb5-b174-60d1367369c9",
+            "x": 387.6659408369545,
             "y": 30,
             "actors": [],
             "triggers": []
@@ -2820,8 +2880,8 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "map01.png",
-            "inode": "13903241",
-            "_v": 1607923078590
+            "inode": "7295135",
+            "_v": 1607862638129
         },
         {
             "id": "2c23b50a-0506-4738-8028-7dba2591c2b1",
@@ -2831,8 +2891,30 @@
             "imageWidth": 160,
             "imageHeight": 160,
             "filename": "map02.png",
-            "inode": "13903242",
-            "_v": 1607923078589
+            "inode": "7428504",
+            "_v": 1607862274520
+        },
+        {
+            "id": "19412431-3890-427f-bd1c-64f1acd42a32",
+            "name": "title-blink",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "title-blink.png",
+            "inode": "7474888",
+            "_v": 1607969649068
+        },
+        {
+            "id": "fdd7ebfb-b0ec-48be-835b-c4b9361cc1a0",
+            "name": "title03-2",
+            "width": 20,
+            "height": 32,
+            "imageWidth": 160,
+            "imageHeight": 256,
+            "filename": "title03-2.png",
+            "inode": "7473793",
+            "_v": 1607968866485
         },
         {
             "id": "b4c9a1be-eda9-42a5-a6e3-c7e1fcd32691",
@@ -2842,8 +2924,8 @@
             "imageWidth": 160,
             "imageHeight": 224,
             "filename": "title03.png",
-            "inode": "13903245",
-            "_v": 1607923510483
+            "inode": "7473428",
+            "_v": 1607968810988
         }
     ],
     "spriteSheets": [
@@ -2853,8 +2935,8 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "actor.png",
-            "inode": "13153936",
-            "_v": 1607923078595
+            "inode": "7295142",
+            "_v": 1607859649226
         },
         {
             "id": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
@@ -2862,17 +2944,35 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "actor_animated.png",
-            "inode": "13153937",
-            "_v": 1607923078595
+            "inode": "7295143",
+            "_v": 1607859649226
         },
         {
-            "id": "6d4581c0-fa15-4f08-96a5-15e08a2a7a02",
+            "id": "ca02ad2c-872d-4ec1-a1e9-e0b542dce89c",
+            "name": "bed",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "bed.png",
+            "inode": "7477644",
+            "_v": 1607973414740
+        },
+        {
+            "id": "83f06070-cb4f-4cda-aa1b-d7753b05a981",
+            "name": "blank",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "blank.png",
+            "inode": "7474105",
+            "_v": 1607969161586
+        },
+        {
+            "id": "eafe4b31-9ecb-46d5-bcbc-32c61c5da8ac",
             "name": "crown",
             "numFrames": 4,
             "type": "animated",
             "filename": "crown.png",
-            "inode": "13903390",
-            "_v": 1607925172908
+            "inode": "7473430",
+            "_v": 1607968810987
         },
         {
             "id": "9096d2cd-725b-4c1f-b767-9d7c44233f28",
@@ -2880,8 +2980,8 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "player.png",
-            "inode": "13153948",
-            "_v": 1607923078595
+            "inode": "7295153",
+            "_v": 1607859649226
         },
         {
             "id": "ba8f38c7-cacd-493b-882d-906960e8d61b",
@@ -2889,8 +2989,8 @@
             "numFrames": 2,
             "type": "animated",
             "filename": "signs/sign_01.png",
-            "inode": "13165207",
-            "_v": 1607923078595
+            "inode": "7295160",
+            "_v": 1607859649226
         },
         {
             "id": "000a1025-7974-4665-a062-1563f7f876ba",
@@ -2898,8 +2998,8 @@
             "numFrames": 2,
             "type": "animated",
             "filename": "signs/signpost_01.png",
-            "inode": "13165208",
-            "_v": 1607923078595
+            "inode": "7295161",
+            "_v": 1607859649226
         },
         {
             "id": "0c762cbf-47e0-4ff2-8ce6-f980a75c54a8",
@@ -2907,8 +3007,8 @@
             "numFrames": 1.75,
             "type": "animated",
             "filename": "signs/small_sign_01.png",
-            "inode": "13165206",
-            "_v": 1607923078595
+            "inode": "7295162",
+            "_v": 1607859649226
         },
         {
             "id": "daf95270-e30d-423b-9ee7-990ae29f57f6",
@@ -2916,8 +3016,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "static.png",
-            "inode": "13153938",
-            "_v": 1607923078595
+            "inode": "7295163",
+            "_v": 1607859649226
         },
         {
             "id": "ba25926e-58e9-4bcd-b417-66231c48922a",
@@ -2925,17 +3025,17 @@
             "numFrames": 4,
             "type": "animated",
             "filename": "tree.png",
-            "inode": "13903249",
-            "_v": 1607923078595
+            "inode": "7442842",
+            "_v": 1607880547635
         },
         {
-            "id": "d23fc84d-2c25-4ee0-ba2f-27f24d1931c4",
+            "id": "16d1ffc1-dbd4-42f3-99de-604d59477802",
             "name": "wood",
             "numFrames": 4,
             "type": "animated",
             "filename": "wood.png",
-            "inode": "13903387",
-            "_v": 1607924852864
+            "inode": "7473432",
+            "_v": 1607968810988
         }
     ],
     "palettes": [
@@ -3085,16 +3185,12 @@
                 "0": {
                     "id": "0",
                     "name": "AnimationFrame"
-                },
-                "1": {
-                    "id": "1",
-                    "name": "Variable B"
                 }
             },
             "actors": {
                 "0": {
                     "id": "0",
-                    "name": "WoodPiece"
+                    "name": "WoodPie"
                 }
             },
             "script": [
@@ -3102,79 +3198,18 @@
                     "id": "87305fef-483b-4e5d-95fb-c3793495254c",
                     "command": "EVENT_INC_VALUE",
                     "args": {
-                        "variable": "0",
-                        "__collapse": true
+                        "variable": "0"
                     }
                 },
                 {
-                    "id": "5454f75e-6e12-43ec-abfe-becf7b91e965",
-                    "command": "EVENT_IF_VALUE",
+                    "id": "58ee4245-bced-477a-a818-3eccc25a165c",
+                    "command": "EVENT_ACTOR_SET_FRAME",
                     "args": {
-                        "variable": "0",
-                        "operator": ">",
-                        "comparator": 3,
-                        "__collapseElse": false
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "id": "9c1fb75b-059b-439b-b506-b3ca7108d746",
-                                "command": "EVENT_INC_VALUE",
-                                "args": {
-                                    "variable": "1"
-                                }
-                            },
-                            {
-                                "id": "52cc351b-756f-4818-949b-3f12205eb8dc",
-                                "command": "EVENT_ACTOR_HIDE",
-                                "args": {
-                                    "actorId": "0"
-                                }
-                            },
-                            {
-                                "id": "07e26409-2960-4e7e-8bee-f935b7487e79",
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "0",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 0
-                                    }
-                                }
-                            },
-                            {
-                                "id": "a1feb4a1-c05a-4dc0-9bf5-8945e8f776b0",
-                                "command": "EVENT_TEXT",
-                                "args": {
-                                    "text": [
-                                        "You have $V1$ wood\npiece(s)"
-                                    ],
-                                    "avatarId": ""
-                                }
-                            },
-                            {
-                                "id": "aff17754-4d6d-4c47-b70b-08eae2e37e4f",
-                                "command": "EVENT_END"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "id": "58ee4245-bced-477a-a818-3eccc25a165c",
-                                "command": "EVENT_ACTOR_SET_FRAME",
-                                "args": {
-                                    "actorId": "0",
-                                    "frame": {
-                                        "type": "variable",
-                                        "value": "0"
-                                    },
-                                    "__collapse": false
-                                }
-                            },
-                            {
-                                "id": "a29e747b-4ab2-4ca6-a7c6-549eeb071e6c",
-                                "command": "EVENT_END"
-                            }
-                        ]
+                        "actorId": "0",
+                        "frame": {
+                            "type": "variable",
+                            "value": "0"
+                        }
                     }
                 },
                 {
@@ -3190,15 +3225,11 @@
             "name": "template",
             "filename": "template.mod",
             "settings": {},
-            "inode": "13153934",
-            "_v": 1607923078569
+            "inode": "7295140",
+            "_v": 1607859649203
         }
     ],
     "variables": [
-        {
-            "id": "0",
-            "name": "Inventory: Wood"
-        },
         {
             "id": "a4aa06ff-a6e4-44fc-a612-ed3a2ed5119f__L0",
             "name": "damage"
@@ -3238,6 +3269,10 @@
         {
             "id": "fda946e6-4992-4fc9-b4b3-6a11365b8eff__L0",
             "name": "damage"
+        },
+        {
+            "id": "0",
+            "name": "Inventory: Wood"
         },
         {
             "id": "d564b9f1-1bb6-41d1-80ef-88269450d881__L0",
@@ -3286,17 +3321,25 @@
         {
             "id": "8faa6f1e-884f-40c6-8886-ee77e0201595__L0",
             "name": "damage"
+        },
+        {
+            "id": "5aae2bdc-1cfa-4db2-a529-2673dfde6f11__L0",
+            "name": "GameSelect"
+        },
+        {
+            "id": "704d46d8-fabb-4bb5-b174-60d1367369c9__L0",
+            "name": "GameMode"
         }
     ],
     "settings": {
-        "startSceneId": "d0dd92fb-96a6-434c-80f2-eed07249fa9d",
-        "startX": 14,
+        "startSceneId": "5aae2bdc-1cfa-4db2-a529-2673dfde6f11",
+        "startX": 1,
         "startY": 3,
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1238,
-        "worldScrollY": 2289,
-        "zoom": 562.9055786132812,
+        "worldScrollX": 211,
+        "worldScrollY": 354,
+        "zoom": 189.49920654296875,
         "customColorsEnabled": false,
         "defaultBackgroundPaletteIds": [
             "default-bg-1",
