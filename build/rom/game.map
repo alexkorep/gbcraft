@@ -189,7 +189,8 @@ AREA .  .ABS.
 		l__HOME	0252
 		l__GSINIT	0507
 		l__DATA	0E1E
-		l__CODE_5	2037
+		l__CODE_7	1304
+		l__CODE_5	2055
 		l__CODE	2C12
 		s__HOME	2E12
 		s__BASE	3064
@@ -199,11 +200,12 @@ AREA .  .ABS.
 		l__CODE_1	35B4
 		s__GSINITTAIL	3789
 		s__GSFINAL	378A
-		l__CODE_6	3E06
+		l__CODE_6	3FEF
 		s__CODE_1	4000
 		s__CODE_4	4000
 		s__CODE_5	4000
 		s__CODE_6	4000
+		s__CODE_7	4000
 		s__BSEG	74DF
 		s__ISEG	74DF
 		s__XSEG	74DF
@@ -1013,36 +1015,43 @@ AREA _XSEG
 AREA _CODE_6
 	RADIX HEX
 	BASE 4000
-	SIZE 3E06
+	SIZE 3FEF
 	ATTRIB REL CON
 	GLOBALS
 		_bank_6_data	4000
+AREA _CODE_7
+	RADIX HEX
+	BASE 4000
+	SIZE 1304
+	ATTRIB REL CON
+	GLOBALS
+		_bank_7_data	4000
 AREA _CODE_5
 	RADIX HEX
 	BASE 4000
-	SIZE 2037
+	SIZE 2055
 	ATTRIB REL CON
 	GLOBALS
 		_tileset_bank_ptrs	4000
-		_background_bank_ptrs	4006
-		_background_attr_bank_ptrs	400F
-		_palette_bank_ptrs	4018
-		_sprite_bank_ptrs	401B
-		_scene_bank_ptrs	4027
-		_collision_bank_ptrs	4030
-		_avatar_bank_ptrs	4039
-		_music_tracks	403C
-		_music_banks	4040
-		_Start_Adventure	4042
-		_Update_Adventure	4057
-		_Start_Platform	4657
-		_Update_Platform	4723
-		_Start_PointNClick	5303
-		_Update_PointNClick	532C
-		_Start_Shmup	55E7
-		_Update_Shmup	5677
-		_Start_TopDown	5C19
-		_Update_TopDown	5C2E
+		_background_bank_ptrs	4009
+		_background_attr_bank_ptrs	4018
+		_palette_bank_ptrs	4027
+		_sprite_bank_ptrs	402A
+		_scene_bank_ptrs	4039
+		_collision_bank_ptrs	4048
+		_avatar_bank_ptrs	4057
+		_music_tracks	405A
+		_music_banks	405E
+		_Start_Adventure	4060
+		_Update_Adventure	4075
+		_Start_Platform	4675
+		_Update_Platform	4741
+		_Start_PointNClick	5321
+		_Update_PointNClick	534A
+		_Start_Shmup	5605
+		_Update_Shmup	5695
+		_Start_TopDown	5C37
+		_Update_TopDown	5C4C
 AREA _SFR0
 	RADIX HEX
 	BASE 0000
@@ -1452,80 +1461,83 @@ MODULES
 		NAME Runtime
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Actor_a.o
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Actor_b.o
-		NAME _var_folders_kt_zwts52694jj90flt ù7(ò
+		NAME _var_folders_kt_zwts52694jj90flt0¬b±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Actor.o
-		NAME _var_folders_kt_zwts52694jj90flt‡§7(ò
+		NAME _var_folders_kt_zwts52694jj90fltP∆b±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/asm.macros.o
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/BankData.o
-		NAME _var_folders_kt_zwts52694jj90flt0X7(ò
+		NAME _var_folders_kt_zwts52694jj90flt b±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/BankManager.o
-		NAME _var_folders_kt_zwts52694jj90flt[7(ò
+		NAME _var_folders_kt_zwts52694jj90flt–Õb±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Camera_a.o
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Camera.o
-		NAME _var_folders_kt_zwts52694jj90flt∑]Ç˘
+		NAME _var_folders_kt_zwts52694jj90fltÄ“b±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Collision.o
-		NAME _var_folders_kt_zwts52694jj90fltT
+		NAME _var_folders_kt_zwts52694jj90fltp÷b±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Core_Main.o
-		NAME _var_folders_kt_zwts52694jj90fltq<ÅÇ˘
+		NAME _var_folders_kt_zwts52694jj90flt†zb±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/DataManager.o
-		NAME _var_folders_kt_zwts52694jj90flt
+		NAME _var_folders_kt_zwts52694jj90flt@ª≥ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/FadeManager_b.o
-		NAME _var_folders_kt_zwts52694jj90flt`ê»%ò
+		NAME _var_folders_kt_zwts52694jj90flt
+ª≥ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/FadeManager.o
-		NAME _var_folders_kt_zwts52694jj90fltP(ò
+		NAME _var_folders_kt_zwts52694jj90flt
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/gbt_player_bank1.o
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/gbt_player.o
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Input.o
-		NAME _var_folders_kt_zwts52694jj90flt¿π(ò
+		NAME _var_folders_kt_zwts52694jj90fltÄ!p±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Math.o
-		NAME _var_folders_kt_zwts52694jj90flt`…%ò
+		NAME _var_folders_kt_zwts52694jj90flt
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/MusicManager.o
-		NAME _var_folders_kt_zwts52694jj90fltß»%ò
+		NAME _var_folders_kt_zwts52694jj90fltP,p±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Palette.o
-		NAME _var_folders_kt_zwts52694jj90flt ´»%ò
+		NAME _var_folders_kt_zwts52694jj90flt`0p±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Projectiles_b.o
-		NAME _var_folders_kt_zwts52694jj90flt‡Æ»%ò
+		NAME _var_folders_kt_zwts52694jj90flt 4p±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Projectiles.o
-		NAME _var_folders_kt_zwts52694jj90fltp≤»%ò
+		NAME _var_folders_kt_zwts52694jj90flt∞7p±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/ScriptRunner_b.o
-		NAME _var_folders_kt_zwts52694jj90flt¿Ω»%ò
+		NAME _var_folders_kt_zwts52694jj90flt
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/ScriptRunner.o
-		NAME _var_folders_kt_zwts52694jj90flt∞·»%ò
+		NAME _var_folders_kt_zwts52694jj90flt†Hp±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Scroll_a.o
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Scroll_b.o
-		NAME _var_folders_kt_zwts52694jj90fltêË»%ò
+		NAME _var_folders_kt_zwts52694jj90fltÄ[ê≥ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Scroll.o
-		NAME _var_folders_kt_zwts52694jj90flt‡Î»%ò
+		NAME _var_folders_kt_zwts52694jj90flt–^ê≥ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Sprite_b.o
-		NAME _var_folders_kt_zwts52694jj90flt
+		NAME _var_folders_kt_zwts52694jj90flt@Xp±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Sprite.o
-		NAME _var_folders_kt_zwts52694jj90fltêÛ»%ò
+		NAME _var_folders_kt_zwts52694jj90flt–[p±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Stack.o
-		NAME _var_folders_kt_zwts52694jj90fltÄı»%ò
+		NAME _var_folders_kt_zwts52694jj90flt¿]p±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Trigger_b.o
-		NAME _var_folders_kt_zwts52694jj90flt∞˜»%ò
+		NAME _var_folders_kt_zwts52694jj90flt_p±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Trigger.o
-		NAME _var_folders_kt_zwts52694jj90fltP˙»%ò
+		NAME _var_folders_kt_zwts52694jj90fltêbp±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/UI_b.o
-		NAME _var_folders_kt_zwts52694jj90fltP…%ò
+		NAME _var_folders_kt_zwts52694jj90fltênp±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/UI.o
-		NAME _var_folders_kt_zwts52694jj90flt¿…%ò
+		NAME _var_folders_kt_zwts52694jj90flt
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/bank_6.o
 		NAME bank_6
+	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/bank_7.o
+		NAME bank_7
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/data_ptrs.o
-		NAME _var_folders_kt_zwts52694jj90flt@…%ò
+		NAME _var_folders_kt_zwts52694jj90flt`Ép±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/main.o
-		NAME _var_folders_kt_zwts52694jj90flt¿…%ò
+		NAME _var_folders_kt_zwts52694jj90flt‡àp±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Adventure.o
-		NAME _var_folders_kt_zwts52694jj90flt  …%ò
+		NAME _var_folders_kt_zwts52694jj90flt@ãp±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Platform.o
-		NAME _var_folders_kt_zwts52694jj90flt‡"…%ò
+		NAME _var_folders_kt_zwts52694jj90flt
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/PointNClick.o
-		NAME _var_folders_kt_zwts52694jj90fltÄ&…%ò
+		NAME _var_folders_kt_zwts52694jj90flt†ëp±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/Shmup.o
-		NAME _var_folders_kt_zwts52694jj90fltÄ)…%ò
+		NAME _var_folders_kt_zwts52694jj90flt†îp±ª
 	FILE /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbsbuild/obj/TopDown.o
-		NAME _var_folders_kt_zwts52694jj90flt‡,…%ò
+		NAME _var_folders_kt_zwts52694jj90flt
 LIBRARIES
 	LIBRARY /var/folders/kt/zwts52694jj90fltjzzjdxfm0000gn/T/_gbstools/gbdk/lib/small/asxxxx/gb/gb.lib
 		MODULE sfr.o
